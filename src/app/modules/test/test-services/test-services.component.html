@@ -1,0 +1,35 @@
+<p>
+  test-services works!
+</p>
+
+
+<pre>{{ db | json}}</pre>
+<div fxLayout="row" fxLayoutAlign="space-around center">
+<div *ngFor = 'let movie of db; let i = index'>
+    <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{movie.movie.name}}</mat-card-title>
+          <mat-card-subtitle>{{movie.category}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{movie.movie.url}}" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <ul>
+              <li *ngFor = 'let actor of db[i].actors'>
+                {{actor}}
+              </li>
+          </ul>
+          <p>
+            Valoración: {{movie.ranking}}
+          </p>
+          <p>
+            País: {{movie.country}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions  fxLayout="row" fxLayoutAlign="space-around center">
+          <button mat-raised-button color="accent" (click)="setRanking$(i ,9.44)">LIKE</button>
+          <button mat-raised-button color="warn">SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>

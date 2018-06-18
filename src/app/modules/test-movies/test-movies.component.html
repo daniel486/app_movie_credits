@@ -1,0 +1,6 @@
+<ol>
+  <li *ngFor = "let movie of movies, let i = index">
+    <p>{{ movie.name }}</p>
+    <img src="{{ movie.url }}">
+  </li>
+</ol>

@@ -1,0 +1,20 @@
+<div fxLayout="row wrap" fxLayoutAlign="space-around center">
+  <div *ngFor = 'let people of cast; let i = index'>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{ people.name }}</mat-card-title>
+      </mat-card-header>
+      <div *ngIf = 'people.profile_path !== null; then no_null_photo else null_photo'></div>
+      <ng-template #no_null_photo>
+        <img mat-card-image src="https://image.tmdb.org/t/p/w500{{ people.profile_path }}">
+      </ng-template>
+      <ng-template #null_photo>
+        <img mat-card-image src="https://www.soundxtra.com/media/catalog/product/placeholder/default/No_available_image.gif">
+      </ng-template>
+      <mat-card-content fxLayout="column" fxLayoutAlign="end center">
+        <p>Character: {{ people.character}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

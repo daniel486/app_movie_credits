@@ -1,0 +1,11 @@
+<div fxLayout="row wrap" fxLayoutAlign="space-around center">
+  <div *ngFor = 'let singleActor of actor; let i = index'>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <a routerLink="/actor/{{singleActor.id}}"><mat-card-title>{{singleActor.name}}</mat-card-title></a>
+      </mat-card-header>
+      <a routerLink="/actor/{{singleActor.id}}"><img mat-card-image src="{{singleActor.photo}}" alt="Photo of the actor"></a>
+    </mat-card>
+  </div>
+</div>

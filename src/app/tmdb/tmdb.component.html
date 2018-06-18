@@ -1,0 +1,11 @@
+<p>
+  tmdb ddworks!
+</p>
+
+<ol>
+  <li *ngFor = "let movie of movies, let i = index">
+    <a [routerLink]="['/tmdb-credits', movie.id]">{{ movie.title }}</a>
+  </li>
+</ol>
+
+

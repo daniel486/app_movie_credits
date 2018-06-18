@@ -1,0 +1,35 @@
+.dark-background {
+    background-color: black;
+}
+.my-box {
+    border: 2px red solid;
+    height: 40px;
+}
+.my-container {
+    border: 2px green solid;
+    height: 500px;
+}
+
+.example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+$size: 30px;
+
+.test-saas {
+    font-size: $size;
+    h1 {
+        color: red;
+    }
+    .description{
+        color: green;
+        span{
+            color: pink;
+        }
+    }
+}
